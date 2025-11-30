@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satheesh S | Automation Tester</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-m9Zxqqh8.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Bnz7rrtR.css">
+</head>
+
+<body>
+    <div class="background-grid"></div>
+
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Satheesh<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge">QA Automation Expert</div>
+                    <h1 class="name">Satheesh S</h1>
+                    <h2 class="title">Building Robust <span class="gradient-text">Automation Frameworks</span></h2>
+                    <p class="tagline">Specialized in Playwright, Selenium, and Java. Transforming manual testing into
+                        efficient, automated pipelines.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">Let's Talk <i class="ri-arrow-right-line"></i></a>
+                        <a href="#experience" class="btn btn-secondary">View Work</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="window-title">automation.spec.ts</span>
+                        </div>
+                        <div class="window-body">
+                            <div class="code-line"><span class="keyword">import</span> { test, expect } <span
+                                    class="keyword">from</span> <span class="string">'@playwright/test'</span>;</div>
+                            <div class="code-line">&nbsp;</div>
+                            <div class="code-line"><span class="function">test</span>(<span class="string">'has
+                                    title'</span>, <span class="keyword">async</span> ({ page }) => {</div>
+                            <div class="code-line indent"> <span class="keyword">await</span> page.<span
+                                    class="function">goto</span>(<span class="string">'https://satheesh.dev'</span>);
+                            </div>
+                            <div class="code-line indent"> <span class="comment">// Expect a title "to contain" a
+                                    substring.</span></div>
+                            <div class="code-line indent"> <span class="keyword">await</span> <span
+                                    class="function">expect</span>(page).<span class="function">toHaveTitle</span>(<span
+                                    class="regex">/Automation/</span>);</div>
+                            <div class="code-line">});</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="bento-grid">
+                    <!-- About Card -->
+                    <div class="bento-item about-card">
+                        <div class="icon-box"><i class="ri-user-smile-line"></i></div>
+                        <h3>About Me</h3>
+                        <p>I am a <strong>QA Automation Tester</strong> at Anubavam Technologies, bridging the gap
+                            between manual testing and automated efficiency. I build custom frameworks that save time
+                            and ensure quality.</p>
+                    </div>
+
+                    <!-- Stats Card 1 -->
+                    <div class="bento-item stat-card">
+                        <div class="stat-number">1.10+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+
+                    <!-- Stats Card 2 -->
+                    <div class="bento-item stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Automation Coverage</div>
+                    </div>
+
+                    <!-- Focus Card -->
+                    <div class="bento-item focus-card">
+                        <h3>My Focus</h3>
+                        <ul class="focus-list">
+                            <li><i class="ri-checkbox-circle-line"></i> Web Automation</li>
+                            <li><i class="ri-checkbox-circle-line"></i> API Testing</li>
+                            <li><i class="ri-checkbox-circle-line"></i> CI/CD Pipelines</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Tech Stack</h2>
+                    <p class="section-subtitle">Tools and technologies I use to break (and fix) software.</p>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-icon"><i class="ri-code-s-slash-line"></i></div>
+                        <h3>Automation</h3>
+                        <div class="tags">
+                            <span>Playwright</span>
+                            <span>Selenium</span>
+                            <span>Appium</span>
+                            <span>Cucumber</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon"><i class="ri-terminal-box-line"></i></div>
+                        <h3>Languages</h3>
+                        <div class="tags">
+                            <span>Java</span>
+                            <span>TypeScript</span>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon"><i class="ri-tools-line"></i></div>
+                        <h3>Tools</h3>
+                        <div class="tags">
+                            <span>Jenkins</span>
+                            <span>Git</span>
+                            <span>Jira</span>
+                            <span>Postman</span>
+                            <span>Maven</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card highlight">
+                        <div class="tech-icon"><i class="ri-lightbulb-flash-line"></i></div>
+                        <h3>Specialty</h3>
+                        <p>Custom Playwright framework development with Excel data-driven testing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Career Journey</h2>
+                <div class="timeline-wrapper">
+
+                    <div class="timeline-entry">
+                        <div class="timeline-year">2024 - Present</div>
+                        <div class="timeline-details">
+                            <h3>QA Automation Tester</h3>
+                            <span class="company">Anubavam Technologies Pvt. Ltd.</span>
+                            <p>Leading automation initiatives using Playwright and Selenium. Implementing CI/CD
+                                pipelines with Jenkins.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-details">
+                            <h3>Software QA Tester</h3>
+                            <span class="company">Inmakes Infotech Pvt Ltd</span>
+                            <p>Executed manual test cases and initiated automation scripts for web applications.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <div class="timeline-year">2020 - 2023</div>
+                        <div class="timeline-details">
+                            <h3>GIS Analyst</h3>
+                            <span class="company">EDR Continuous Information</span>
+                            <p>Data digitization and automation of workflows using QGIS.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h2>Let's Connect</h2>
+                        <p>Open to opportunities and collaborations.</p>
+
+                        <a href="mailto:satheesh30526@gmail.com" class="contact-link">
+                            <i class="ri-mail-send-line"></i>
+                            <span>satheesh30526@gmail.com</span>
+                        </a>
+
+                        <a href="tel:9047489584" class="contact-link">
+                            <i class="ri-phone-line"></i>
+                            <span>+91 9047489584</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/satheesh-s-07a0971a5" target="_blank" class="contact-link">
+                            <i class="ri-linkedin-box-line"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-visual">
+                        <!-- Abstract decorative circle -->
+                        <div class="circle-decoration"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Satheesh S.</p>
+                <p>Built with <i class="ri-heart-fill" style="color: var(--primary-color)"></i> & Vite</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
