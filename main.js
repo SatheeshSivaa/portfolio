@@ -4,58 +4,22 @@
 // =========================================
 
 // =========================================
-// 3D ANIMATED LOADING SCREEN
+// 3D LOADING ANIMATION
 // =========================================
 document.addEventListener('DOMContentLoaded', () => {
     const loader = document.getElementById('loader');
     const mainContent = document.getElementById('main-content');
-    const progressFill = document.querySelector('.loader-progress-fill');
-    const statusText = document.getElementById('loader-status');
-    const percentText = document.getElementById('loader-percent');
 
-    // Loading stages with automation-themed messages
-    const loadingStages = [
-        { percent: 0, text: 'Initializing...' },
-        { percent: 15, text: 'Loading test frameworks...' },
-        { percent: 30, text: 'Configuring Playwright...' },
-        { percent: 45, text: 'Setting up Selenium...' },
-        { percent: 60, text: 'Connecting to Jenkins...' },
-        { percent: 75, text: 'Running sanity checks...' },
-        { percent: 90, text: 'Almost ready...' },
-        { percent: 100, text: 'All tests passed!' }
-    ];
+    // Initialize smooth scroll immediately
+    initSmoothScroll();
 
-    let currentStage = 0;
-
-    // Animate through loading stages
-    function updateProgress() {
-        if (currentStage < loadingStages.length) {
-            const stage = loadingStages[currentStage];
-
-            if (progressFill) progressFill.style.width = stage.percent + '%';
-            if (statusText) statusText.textContent = stage.text;
-            if (percentText) percentText.textContent = stage.percent + '%';
-
-            currentStage++;
-
-            // Random delay between 200ms and 500ms for realistic feel
-            const delay = Math.random() * 300 + 200;
-            setTimeout(updateProgress, delay);
-        } else {
-            // Loading complete - hide loader
-            setTimeout(() => {
-                loader.classList.add('hidden');
-                mainContent.classList.add('visible');
-
-                // Start animations after load
-                initAnimations();
-                startParticles();
-            }, 500);
-        }
-    }
-
-    // Start loading animation after a small delay
-    setTimeout(updateProgress, 500);
+    // Show loader for 1.5 seconds then fade to main content
+    setTimeout(() => {
+        loader.classList.add('hidden');
+        mainContent.classList.add('visible');
+        initAnimations();
+        startParticles();
+    }, 1500);
 });
 
 // =========================================
@@ -219,7 +183,6 @@ function initAnimations() {
     initTypingEffect();
     initCounters();
     initNavigation();
-    initSmoothScroll();
 }
 
 // =========================================
@@ -369,14 +332,28 @@ function initNavigation() {
 // SMOOTH SCROLL
 // =========================================
 function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+
+            // Skip if it's just "#"
+            if (href === '#') return;
+
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+
+            const targetId = href.substring(1);
+            const target = document.getElementById(targetId);
+
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
                 });
 
                 // Close mobile menu if open

@@ -24,64 +24,49 @@
     <!-- Gradient Mesh Background -->
     <div class="gradient-mesh"></div>
 
-    <!-- 3D Animated Loading Screen -->
+    <!-- 3D Loading Animation -->
     <div class="loader-3d" id="loader">
-        <!-- Background Effects -->
-        <div class="loader-bg">
-            <div class="loader-grid"></div>
-            <div class="loader-glow"></div>
-        </div>
-
-        <!-- 3D Cube Animation -->
-        <div class="loader-scene">
-            <div class="cube">
-                <div class="cube-face front"><i class="ri-code-s-slash-line"></i></div>
-                <div class="cube-face back"><i class="ri-bug-line"></i></div>
-                <div class="cube-face right"><i class="ri-flask-line"></i></div>
-                <div class="cube-face left"><i class="ri-terminal-box-line"></i></div>
-                <div class="cube-face top"><i class="ri-checkbox-circle-line"></i></div>
-                <div class="cube-face bottom"><i class="ri-settings-3-line"></i></div>
-            </div>
-        </div>
-
-        <!-- Orbiting Rings -->
-        <div class="orbit-container">
-            <div class="orbit orbit-1"></div>
-            <div class="orbit orbit-2"></div>
-            <div class="orbit orbit-3"></div>
-        </div>
-
-        <!-- Loading Text -->
-        <div class="loader-content">
-            <h1 class="loader-title">
-                <span class="letter" style="--delay: 0">S</span>
-                <span class="letter" style="--delay: 1">a</span>
-                <span class="letter" style="--delay: 2">t</span>
-                <span class="letter" style="--delay: 3">h</span>
-                <span class="letter" style="--delay: 4">e</span>
-                <span class="letter" style="--delay: 5">e</span>
-                <span class="letter" style="--delay: 6">s</span>
-                <span class="letter" style="--delay: 7">h</span>
-                <span class="letter dot" style="--delay: 8">.</span>
-            </h1>
-            <p class="loader-subtitle">QA Automation Engineer</p>
-
-            <!-- Loading Progress -->
-            <div class="loader-progress-container">
-                <div class="loader-progress-bar">
-                    <div class="loader-progress-fill"></div>
-                </div>
-                <div class="loader-status">
-                    <span class="status-text" id="loader-status">Initializing...</span>
-                    <span class="status-percent" id="loader-percent">0%</span>
-                </div>
-            </div>
-        </div>
-
         <!-- Floating Particles -->
         <div class="loader-particles">
             <span></span><span></span><span></span><span></span><span></span>
             <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="loader-wrapper">
+            <!-- Glow Effect -->
+            <div class="loader-glow"></div>
+
+            <!-- 3D Cube Scene -->
+            <div class="cube-scene">
+                <div class="cube">
+                    <div class="cube-face front"><i class="ri-terminal-box-line"></i></div>
+                    <div class="cube-face back"><i class="ri-code-s-slash-line"></i></div>
+                    <div class="cube-face right"><i class="ri-braces-line"></i></div>
+                    <div class="cube-face left"><i class="ri-bug-line"></i></div>
+                    <div class="cube-face top"><i class="ri-flask-line"></i></div>
+                    <div class="cube-face bottom"><i class="ri-settings-3-line"></i></div>
+                </div>
+                <!-- Orbiting Rings -->
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+                <div class="orbit orbit-3"></div>
+            </div>
+
+            <!-- Name & Role with 3D Animation -->
+            <div class="loader-text">
+                <h1 class="loader-name-3d">
+                    <span style="--i:0">S</span>
+                    <span style="--i:1">a</span>
+                    <span style="--i:2">t</span>
+                    <span style="--i:3">h</span>
+                    <span style="--i:4">e</span>
+                    <span style="--i:5">e</span>
+                    <span style="--i:6">s</span>
+                    <span style="--i:7">h</span>
+                    <span class="dot" style="--i:8">.</span>
+                </h1>
+                <p class="loader-role-3d">QA Automation Engineer</p>
+            </div>
         </div>
     </div>
 
@@ -227,14 +212,16 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Scroll Indicator -->
-                    <div class="scroll-indicator">
-                        <div class="mouse">
-                            <div class="wheel"></div>
-                        </div>
-                        <span>Scroll to explore</span>
-                    </div>
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll to explore</span>
+            </div>
         </section>
 
         <!-- About Section -->
